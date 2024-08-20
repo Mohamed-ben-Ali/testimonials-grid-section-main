@@ -1,0 +1,207 @@
+:root {
+  /* Primary  */
+  --moderateviolet: hsl(263, 55%, 52%);
+  --verydarkgrayishblue: hsl(217, 19%, 35%);
+  --verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--Light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 15px;
+}
+.testimonials{
+  display: grid;
+  grid-template-columns: 80%  20% ;
+  padding: 50px;
+  gap: 30px;
+  justify-content: center;
+}
+.testimonials .testimonial-card{
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.testimonial-card .card-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.card-header .head h3{
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.card-header .head h4{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--Light-gray);
+}
+.testimonial-card .card-header img{
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.testimonial-card .card-body .desc{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.testimonial-card .card-body .qute{
+  line-height: 1.5;
+  font-weight: 500;
+}
+.container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+.container .box1{
+  display: grid;
+  grid-template-columns:65% calc(100% - (65% + 30px));
+  grid-template-rows: 350px;
+  gap: 30px;
+}
+.box1 .card1{
+  background-color: var(--moderateviolet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: 80%;
+  background-size: 150px;
+}
+.box1 .card1 .card-header .head h3{
+  color: var(--Light-grayish-blue);
+}
+.box1 .card1 .card-body .desc{
+  color: var(--Light-grayish-blue);
+  font-size: 23px;
+}
+.box1 .card1 .card-body .qute{
+  color: var(--Light-gray);
+}
+.box1 .card2{
+  background-color: var(--verydarkgrayishblue);
+}
+.card2 .card-header .head h3{
+  color: var(--Light-grayish-blue);
+}
+.card2 .card-body .desc{
+  color: var(--White);
+}
+.card2 .card-body .qute{
+  color: var(--Light-gray);
+}
+.container .box2{
+  display: grid;
+  grid-template-columns:calc(100% - (65% + 30px)) 65% ;
+  grid-template-rows: 350px;
+  gap: 30px;
+}
+.box2 .card3{
+  background-color: var(--White);
+}
+.card3 .card-header h3{
+  color: var(--verydarkgrayishblue);
+}
+.card3 .card-body{
+  padding-right: 4rem;
+}
+.card3 .card-body .desc{
+  color: var(--verydarkgrayishblue);
+}
+.card3 .card-body .qute{
+  color: var(--verydarkgrayishblue);
+}
+.box2 .card4{
+  background-color: var(--verydarkblackishblue);
+}
+.card4 .card-header h3{
+  color: var(--Light-grayish-blue);
+}
+.card4 .card-body .desc{
+  color: var(--Light-grayish-blue);
+  font-size: 25px;
+}
+.card4 .card-body .qute{
+  color: var(--Light-grayish-blue);
+}
+.card5{
+  background-color: var(--White);
+}
+.card5 .card-header h3{
+  color: var(--verydarkgrayishblue);
+}
+.card5 .card-body .desc{
+  color: var(--verydarkgrayishblue);
+}
+.card5 .card-body .qute{
+  color: var (--verydarkgrayishblue);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 20px;
+  }
+  .container {
+    grid-template-rows: auto;
+  }
+  .container .box1, .container .box2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .box1 .card1, .box1 .card2, .box2 .card3, .box2 .card4 {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 20px;
+  }
+  .testimonial-card {
+    padding: 15px;
+  }
+  .testimonial-card .card-header img {
+    margin-right: 15px;
+  }
+  .testimonial-card .card-body .desc {
+    font-size: 1.2rem;
+  }
+  .testimonial-card .card-body .qute {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 10px;
+  }
+  .testimonial-card .card-header img {
+    width: 50px;
+    height: 50px;
+  }
+  .testimonial-card .card-header .head h3 {
+    font-size: 1rem;
+  }
+  .testimonial-card .card-header .head h4 {
+    font-size: 0.8rem;
+  }
+  .testimonial-card .card-body .desc {
+    font-size: 1rem;
+  }
+  .testimonial-card .card-body .qute {
+    font-size: 0.9rem;
+  }
+}
